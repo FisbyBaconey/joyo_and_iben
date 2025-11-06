@@ -16,7 +16,8 @@ def create_assistant(assistant_id, name, role):
         warn("Permission denied: only Coordinator can create assistants.")
         return
     try:
-        # TODO: Something is missing here
+        # added ln 20
+        assistant= assistant_id,name
         assistant_service.insert(assistant)
         success(f"Assistant {name} created with ID: {assistant_id}")
     except Exception as e:

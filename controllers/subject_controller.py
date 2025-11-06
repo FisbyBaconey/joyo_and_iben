@@ -13,7 +13,8 @@ def _is_coordinator(role):
 
 def create_subject(subject_id, name, role):
     try:
-        # TODO: Something is missing here
+        # added ln 17
+        subject= subject_id,name
         subject_service.insert(subject)
         success(f"Subject {name} created with ID: {subject_id}")
     except Exception as e:
